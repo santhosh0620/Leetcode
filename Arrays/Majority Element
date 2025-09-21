@@ -1,0 +1,18 @@
+class Solution {
+    public int majorityElement(int[] nums) {
+      int count = 0;
+      int candiatate = 0;
+      for(int num:nums){
+        if(count==0){
+            candiatate = num;
+        }
+        if(num==candiatate){
+            count++;
+        }
+        else{
+            count--;
+        }
+      }
+      return candiatate;
+    }
+}
